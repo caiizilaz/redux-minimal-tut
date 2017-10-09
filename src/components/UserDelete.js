@@ -30,6 +30,10 @@ class UserDelete extends Component {
   }
   userDelete(e) {
     this.props.dispatch({
+      type: 'userDelete',
+      id: this.props.modal_delete.id
+    })
+    this.props.dispatch({ // delete from state
       type: 'users.delete',
       id: this.props.modal_delete.id
     })
